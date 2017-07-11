@@ -1,0 +1,1 @@
+bool isPositive(int x);
