@@ -9,3 +9,9 @@ isPositive.o: isPositive.cpp
 
 isNegative.o: isNegative.cpp
 	g++ -c isNegative.cpp
+
+clean:
+	rm -f *.o *.S main
+
+linkerError: main.cpp isPositive.o # forgot isNegative.o
+	g++ main.cpp isPositive.o -o main 
