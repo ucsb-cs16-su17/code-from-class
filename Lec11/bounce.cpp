@@ -26,7 +26,7 @@ int main(int argc, char** argv)
                     // by giving it the current time
     clearScreen();
 
-    const double refreshRate = 0.05;
+    const double refreshRate = 0.1;
 
     int randomInitialX = rand() % cols + 1; // picks a number in [1, cols]
     int randomInitialY = rand() % rows + 1;
@@ -50,13 +50,16 @@ int main(int argc, char** argv)
         writeCharAtCoordinate(p.y, p.x, '*');
         wait(refreshRate);
 
+        // update point using direction
         p.x += direction.x;
         p.y += direction.y;
 
+        // did we hit the top or bottom wall?
         if (p.y == 1 || p.y == rows) {
             direction.y = -direction.y;
         }
 
+        // did we hit the left or right wall?
         if (p.x == 1 || p.x == cols) {
             direction.x = -direction.x;
         }
