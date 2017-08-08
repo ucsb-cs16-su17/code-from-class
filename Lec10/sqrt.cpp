@@ -34,6 +34,6 @@ double sqrt(double x) {
 
 int main(int argc, char const *argv[])
 {
-    cout << sqrt(2.0) << endl;
+    cout << sqrt(9.0) << endl;
     return 0;
 }
