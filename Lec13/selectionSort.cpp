@@ -77,7 +77,7 @@ int main(int argc, char const *argv[])
     }
     cout << endl;
 
-    // similarly, YOU CAN TOTALLY SORT STRINGS
+    // similarly, YOU CAN TOTALLY SORT STRINGS (which are just arrays of characters deep down)
 
     return 0;
 }
